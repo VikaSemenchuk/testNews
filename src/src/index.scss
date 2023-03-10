@@ -1,0 +1,25 @@
+@import './sass/_reset';
+@import './sass/_common';
+@import './sass/_mixin';
+@import './sass/_vars';
+@import './sass/container';
+
+@import './components/articlesSearch/articlesSearch.scss';
+@import './components/mostPopular/mostPopular.scss';
+@import './components/timesNewswire/timesNewswire.scss';
+@import './components/calendar/calendar.scss';
+@import './components/render/render.scss';
+@import './components/button/button.scss';
+@import './components/categories/categories.scss';
+@import './components/collectionNews/collectionNews.scss';
+@import './components/favoriteNews/favoriteNews.scss';
+@import './components/footer/footer.scss';
+@import './components/preLoader/preLoader.scss';
+@import './components/main/main.scss';
+@import './components/modeSwitcher/mode-switcher/mode-switcher.scss';
+@import './components/newsCard/newsCard.scss';
+@import './components/pagination/pagination.scss';
+@import './components/readNews/readNews.scss';
+@import './components/openWeather/openWeather.scss';
+@import './components/header/header-styles/logo.scss';
+@import './components/header/header-styles/menu.scss';

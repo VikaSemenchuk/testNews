@@ -1,0 +1,231 @@
+.container-calendar {
+    display: flex;
+    align-items: center;
+}
+
+.label-date {
+    display: none;
+    margin-right: 37px;
+    margin-left: auto;
+    color: var(--blck-text-color);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.38;
+
+    @include desktop {
+        display: inline-block;
+    }
+}
+
+.input-date {
+    position: relative;
+    width: 151px;
+    height: 31px;
+
+    margin-right: 16px;
+    margin-left: 24px;
+
+    @include tablet {
+        margin-left: 40px;
+    }
+
+    @include desktop {
+        margin-left: 0;
+        margin-right: 52px;
+    }
+}
+
+.flatpickr {
+    width: 151px;
+    height: 31px;
+
+    border: 1px solid var(--blck-text-color);
+    border-radius: 20px;
+
+    font-size: 12px;
+    color: rgba(17, 19, 33, 0.4);
+    text-align: center;
+
+    &.active {
+            background-color: var(--blue-text-color);
+            border-color: transparent;
+            color: var(--white-text-color);
+        }
+    outline: none;
+
+    &::placeholder {
+        padding-left: 10px;
+    }
+}
+
+.placeholder-white::placeholder {
+    color: var(--white-text-color);
+}
+
+.icon-date {
+    position: absolute;
+    fill: var(--blue-text-color);
+    left: 12px;
+    top: 6px;
+}
+
+.icon-arrow-down {
+    position: absolute;
+    fill: var(--grey-arrow-color);
+    top: 11px;
+    right: 11px;
+}
+
+.icon-arrow-up {
+    position: absolute;
+    fill: var(--white-text-color);
+    top: 11px;
+    right: 11px;
+}
+
+.hide {
+    display: none;
+}
+
+.icon-date,
+.icon-arrow-down,
+.icon-arrow-up {
+    pointer-events: none;
+}
+
+.icon-active {
+    fill: var(--white-text-color);
+}
+
+.calendar-wrapper {
+    z-index: 10;
+    position: absolute;
+    width: 110vw;
+    height: 375px;
+    overflow: hidden;
+    pointer-events: none;
+
+    right: -52px;
+
+    @include tablet {
+        width: 50vw;
+        transform: translateX(-5px);
+    }
+
+    @include desktop {
+        right: -52px;
+        width: 33vw;
+    }
+}
+
+.calendar-open {
+    pointer-events:visible ;
+    
+}
+
+.flatpickr-calendar {
+    right: 0 !important;
+    top: 31px !important; 
+    left: auto !important;
+
+    transform: translate(-45px, -120%) !important;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    border-radius: 20px !important;
+}
+
+.flatpickr-calendar.animate.open {
+    margin-top: -31px !important;
+    animation: none !important;
+    transform: translate(-45px, 0) !important;
+    box-shadow: 0px 10px 60px 0px #0000001A !important;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.flatpickr-months {
+    padding-top: 27px !important;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    position: initial !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+    background-color: var(--blue-text-color) !important;
+    border-color: var(--blue-text-color) !important;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+    fill: #47f6ed !important;
+}
+
+.flatpickr-current-month {
+    display: -webkit-box !important;
+}
+
+.numInputWrapper {
+    display: block !important;
+}
+
+.calendar-btn-cross {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-color: transparent;
+}
+
+.calendar-btn-cross::after {
+    content: '\274C';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+
+.calendar-btn-cross:hover {
+    font-size: 20px;
+    transform: scale(1.45) translateY(-35%);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
